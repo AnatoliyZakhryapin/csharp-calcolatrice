@@ -69,5 +69,41 @@ namespace csharp_calcolatrice
         {
             return a >= b ? a : b;
         }
+
+        // BONUS
+
+        public static double Potenza(int baseValue, int esponente)
+        {
+            if (baseValue == 0 && esponente == 0)
+            {
+                return 1;
+            }
+            else if (baseValue < 0 && esponente < 0)
+            {
+                Console.WriteLine("Non si accetta Base ed esponente negativi perchè produrre risultati non definiti. In questo caso viene restituito valore = 0");
+                return 0;
+            }
+
+            double risultato = 1;
+            if (esponente < 0)
+            {
+                baseValue = ValoreAssoluto(baseValue); 
+                esponente = ValoreAssoluto(esponente);
+                for (int i = 0; i < esponente; i++)
+                {
+                    risultato *= baseValue;
+                }
+                risultato = 1 / risultato; 
+            }
+            else
+            {
+                for (int i = 0; i < esponente; i++)
+                {
+                    risultato *= baseValue;
+                }
+            }
+
+            return risultato;
+        }
     }
 }

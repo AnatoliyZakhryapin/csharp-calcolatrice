@@ -52,6 +52,11 @@
             Console.WriteLine("Minimo tra 2.5 e -3.5: " + CalcoliHelper.Min(2.5, -3.5));
             Console.WriteLine("Massimo tra 20 e 15: " + CalcoliHelper.Max(20, 15));
             Console.WriteLine("Massimo tra 7.8 e 9.1: " + CalcoliHelper.Max(7.8, 9.1));
+            Console.WriteLine("Potenza tra 2 e 3: " + CalcoliHelper.Potenza(2, 3));
+            Console.WriteLine("Potenza tra 2 e -3: " + CalcoliHelper.Potenza(2, -3));
+            Console.WriteLine("Potenza tra -2 e 3: " + CalcoliHelper.Potenza(-2, 3));
+            Console.WriteLine("Potenza tra 0 e 0: " + CalcoliHelper.Potenza(0, 0));
+            Console.WriteLine("Potenza tra -2 e -3: " + CalcoliHelper.Potenza(-2, -3));
         }
     }
 }
